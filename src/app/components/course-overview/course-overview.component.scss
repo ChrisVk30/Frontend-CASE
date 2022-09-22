@@ -1,0 +1,56 @@
+#pageContent, form, div {
+    margin: 5px;
+}
+
+input {
+    margin: 0 5px 0 5px;
+}
+
+#input-week {
+    width: 40px;
+}
+
+#input-year {
+    width: 80px;
+}
+
+#coursesForm {
+    display: flex;
+    width:100%;
+}
+
+form div, form {
+    text-align: center;
+}
+
+#coursesCurrentWeek, #coursesAllTime, #coursesPrevWeek, #coursesNextWeek {
+    flex: 1;
+}
+
+#coursesNextWeek {
+    text-align: left;
+    margin-left: 5px;
+}
+
+#coursesPrevWeek {
+    text-align: right;
+    margin-right: 5px;
+}
+
+#coursesByWeekYear {
+    flex: 3;
+}
+
+table {
+    text-align: center;
+}
+
+thead {
+    background-color: cadetblue;
+}
+
+button {
+    border: solid 1px;
+    border-radius: 2px;
+    padding: 2px 10px;
+}

@@ -1,0 +1,35 @@
+form input {
+    margin: 2px;
+}
+
+button {
+    margin: 2px;
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 4px;
+    background-color: blue;
+}
+
+// #add-btn {
+//     background-color: blue;
+// }
+
+input.ng-valid.ng-touched,
+input.ng-valid.ng-dirty {
+    background-color: green;
+    color: white;
+}
+
+input.ng-invalid.ng-touched, 
+input.ng-invalid.ng-dirty {
+    background-color: red;
+    color: white;
+}
+
+button:disabled {
+    background-color: gray;
+}

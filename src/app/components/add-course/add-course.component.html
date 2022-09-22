@@ -1,0 +1,20 @@
+<input type="file" id="uploadingFile" (change)="getFile($event)" accept="txt"/>
+<div>
+<p
+*ngIf="newCourseInstances"
+[class.greenText] = "newCourseInstances"
+>
+{{ message }}</p>
+<p
+*ngIf="duplicateCourseInstances"
+[class.redText] = "duplicateCourseInstances"
+>
+{{ duplicateMessage }}
+</p>
+<p
+*ngIf="errorMessage"
+[class.redText] = "errorMessage"
+>
+{{ errorMessage }}
+</p>
+</div>

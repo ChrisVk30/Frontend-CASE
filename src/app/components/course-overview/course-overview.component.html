@@ -1,0 +1,73 @@
+<div id="pageContent">
+
+<form
+id="coursesForm"
+>
+  <div id="coursesCurrentWeek">
+  <button
+  (click)="getCoursesCurrWk(currentWeek, currentYear)"
+  >
+  Toon huidige week
+  </button>
+  </div>
+  <div id="coursesPrevWeek">
+  <button
+  (click)="getCoursesPrevWk()">
+    << Vorige week
+  </button>
+</div>
+  <form 
+  id="coursesByWeekYear"
+  [formGroup]="getCoursesByWeekYearForm"
+  (ngSubmit)="getCoursesWkYr()">
+    <label for="input-week">Weeknummer: </label>
+    <input id="input-week" type="number" formControlName="chosenWeek">
+    <label for="input-year">Jaartal:</label>
+    <input id="input-year" type="number"  formControlName="chosenYear">
+    <button [disabled]="getCoursesByWeekYearForm.invalid" (ngSubmit)="getCoursesWkYr()">Toon geselecteerde periode</button>
+  </form>
+  <div id="coursesNextWeek">
+    <button
+    (click)="getCoursesNextWk()"
+    >Volgende week >></button>    
+  </div>
+  
+  <div id="coursesAllTime">
+    <button
+    (click)="getAllCourses()"
+    >
+    Toon alle cursussen
+    </button>
+  </div>
+</form>
+
+<table class="table table-bordered" id="sortTable" *ngIf="allcourses.length > 0; else noresults">
+  <thead>
+    <tr>
+      <th>Startdatum</th>
+      <th>Duur (dagen)</th>
+      <th>Cursustitel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+    *ngFor="let course of allcourses">
+      <td>{{ course.startDate | date: 'dd/MM/yyyy' }}</td>
+      <td>{{ course.duration }}</td> 
+      <td>{{ course.title }}</td> 
+    </tr>
+  </tbody>
+</table>
+  
+<ng-template #noresults>
+  <div *ngIf="!isLoading; else loading"No results>
+    No results
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <div>
+    Ophalen van cursussen...
+  </div>
+</ng-template>
+</div>
