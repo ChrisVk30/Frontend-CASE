@@ -5,31 +5,33 @@ id="coursesForm"
 >
   <div id="coursesCurrentWeek">
   <button
-  (click)="getCoursesCurrWk(currentWeek, currentYear)"
+  (click)="getCoursesWk()"
   >
   Toon huidige week
   </button>
   </div>
   <div id="coursesPrevWeek">
   <button
-  (click)="getCoursesPrevWk()">
+  (click)="getCoursesWk(-1)">
     << Vorige week
   </button>
 </div>
-  <form 
-  id="coursesByWeekYear"
-  [formGroup]="getCoursesByWeekYearForm"
-  (ngSubmit)="getCoursesWkYr()">
-    <label for="input-week">Weeknummer: </label>
-    <input id="input-week" type="number" formControlName="chosenWeek">
-    <label for="input-year">Jaartal:</label>
-    <input id="input-year" type="number"  formControlName="chosenYear">
-    <button [disabled]="getCoursesByWeekYearForm.invalid" (ngSubmit)="getCoursesWkYr()">Toon geselecteerde periode</button>
-  </form>
+
+<isk-courses-by-week-form
+  [chosenWeek]="week"
+  [chosenYear]="year"
+  (dateEvent)="getCoursesWkYr($event)"
+  >
+</isk-courses-by-week-form>
+
   <div id="coursesNextWeek">
+    <button id="save" (click)="addBookmark()">
+      ❤
+    </button>
+
     <button
-    (click)="getCoursesNextWk()"
-    >Volgende week >></button>    
+    (click)="getCoursesWk(1)"
+    >Volgende week >></button>  
   </div>
   
   <div id="coursesAllTime">
@@ -41,7 +43,18 @@ id="coursesForm"
   </div>
 </form>
 
-<table class="table table-bordered" id="sortTable" *ngIf="allcourses.length > 0; else noresults">
+<div 
+id="bookmarks"
+*ngIf="bookmarks.length" >
+  <p>Favorieten:</p>  
+  <button
+  *ngFor="let bookmark of bookmarks"
+  (click)= "getCoursesWkYr(bookmark)"
+  >{{bookmark.chosenWeek}} {{bookmark.chosenYear}}
+  </button>
+</div>
+
+<table class="table table-bordered" id="sortTable" *ngIf="allCourses.length > 0; else noresults">
   <thead>
     <tr>
       <th>Startdatum</th>
@@ -51,7 +64,7 @@ id="coursesForm"
   </thead>
   <tbody>
     <tr
-    *ngFor="let course of allcourses">
+    *ngFor="let course of allCourses">
       <td>{{ course.startDate | date: 'dd/MM/yyyy' }}</td>
       <td>{{ course.duration }}</td> 
       <td>{{ course.title }}</td> 

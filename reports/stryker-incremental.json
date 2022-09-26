@@ -1,0 +1,4764 @@
+{
+  "files": {
+    "src/app/app-routing.module.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "0",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 12
+            },
+            "start": {
+              "column": 24,
+              "line": 8
+            }
+          }
+        },
+        {
+          "id": "1",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 9
+            },
+            "start": {
+              "column": 3,
+              "line": 9
+            }
+          }
+        },
+        {
+          "id": "2",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 13,
+              "line": 9
+            },
+            "start": {
+              "column": 11,
+              "line": 9
+            }
+          }
+        },
+        {
+          "id": "3",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 66,
+              "line": 10
+            },
+            "start": {
+              "column": 3,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "4",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 28,
+              "line": 10
+            },
+            "start": {
+              "column": 11,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "5",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 55,
+              "line": 11
+            },
+            "start": {
+              "column": 3,
+              "line": 11
+            }
+          }
+        },
+        {
+          "id": "6",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 11
+            },
+            "start": {
+              "column": 11,
+              "line": 11
+            }
+          }
+        }
+      ],
+      "source": "import { CommonModule } from '@angular/common';\nimport { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { AddCourseComponent } from './components/add-course/add-course.component';\nimport { CourseOverviewComponent } from './components/course-overview/course-overview.component';\nimport { HomeComponent } from './components/home/home.component';\n\nconst routes: Routes = [\n  { path: '', component: HomeComponent },\n  { path: 'course-overview', component: CourseOverviewComponent },\n  { path: 'add-course', component: AddCourseComponent},\n];\n\n@NgModule({\n  imports: [\n    CommonModule,\n    RouterModule.forRoot(routes)\n  ],\n  exports: [\n    RouterModule\n  ]\n})\nexport class AppRoutingModule { }\n"
+    },
+    "src/app/app.component.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "7",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 9
+            },
+            "start": {
+              "column": 11,
+              "line": 9
+            }
+          }
+        }
+      ],
+      "source": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'course-app';\n}\n"
+    },
+    "src/app/components/add-course/add-course.component.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "8",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 19
+            },
+            "start": {
+              "column": 20,
+              "line": 19
+            }
+          }
+        },
+        {
+          "id": "9",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 20
+            },
+            "start": {
+              "column": 21,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "10",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 33,
+              "line": 21
+            },
+            "start": {
+              "column": 31,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "11",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 29,
+              "line": 22
+            },
+            "start": {
+              "column": 27,
+              "line": 22
+            }
+          }
+        },
+        {
+          "id": "12",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 32,
+              "line": 26
+            },
+            "start": {
+              "column": 30,
+              "line": 26
+            }
+          }
+        },
+        {
+          "id": "13",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 33
+            },
+            "start": {
+              "column": 30,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "14",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 26,
+              "line": 30
+            },
+            "start": {
+              "column": 17,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "15",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 64
+            },
+            "start": {
+              "column": 29,
+              "line": 35
+            }
+          }
+        },
+        {
+          "id": "16",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 36
+            },
+            "start": {
+              "column": 17,
+              "line": 36
+            }
+          }
+        },
+        {
+          "id": "17",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 62
+            },
+            "start": {
+              "column": 36,
+              "line": 38
+            }
+          }
+        },
+        {
+          "id": "18",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 42
+            },
+            "start": {
+              "column": 15,
+              "line": 42
+            }
+          }
+        },
+        {
+          "id": "19",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 11,
+              "line": 60
+            },
+            "start": {
+              "column": 21,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "20",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 43
+            },
+            "start": {
+              "column": 25,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "21",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 43
+            },
+            "start": {
+              "column": 25,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "22",
+          "mutatorName": "EqualityOperator",
+          "replacement": "this.errorMessage !== \"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 43
+            },
+            "start": {
+              "column": 25,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "23",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 43
+            },
+            "start": {
+              "column": 47,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "24",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 60
+            },
+            "start": {
+              "column": 51,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "25",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 38,
+              "line": 44
+            },
+            "start": {
+              "column": 23,
+              "line": 44
+            }
+          }
+        },
+        {
+          "id": "26",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 67,
+              "line": 47
+            },
+            "start": {
+              "column": 17,
+              "line": 47
+            }
+          }
+        },
+        {
+          "id": "27",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 65,
+              "line": 47
+            },
+            "start": {
+              "column": 51,
+              "line": 47
+            }
+          }
+        },
+        {
+          "id": "28",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 82,
+              "line": 52
+            },
+            "start": {
+              "column": 17,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "29",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 42,
+              "line": 49
+            },
+            "start": {
+              "column": 25,
+              "line": 49
+            }
+          }
+        },
+        {
+          "id": "30",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 95,
+              "line": 50
+            },
+            "start": {
+              "column": 46,
+              "line": 50
+            }
+          }
+        },
+        {
+          "id": "31",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 95,
+              "line": 50
+            },
+            "start": {
+              "column": 46,
+              "line": 50
+            }
+          }
+        },
+        {
+          "id": "32",
+          "mutatorName": "LogicalOperator",
+          "replacement": "this.stats.courseInstancesAdded.match(/d/g) && []",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 95,
+              "line": 50
+            },
+            "start": {
+              "column": 46,
+              "line": 50
+            }
+          }
+        },
+        {
+          "id": "33",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 95,
+              "line": 50
+            },
+            "start": {
+              "column": 93,
+              "line": 50
+            }
+          }
+        },
+        {
+          "id": "34",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 89,
+              "line": 51
+            },
+            "start": {
+              "column": 40,
+              "line": 51
+            }
+          }
+        },
+        {
+          "id": "35",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 89,
+              "line": 51
+            },
+            "start": {
+              "column": 40,
+              "line": 51
+            }
+          }
+        },
+        {
+          "id": "36",
+          "mutatorName": "LogicalOperator",
+          "replacement": "this.stats.courseInstancesAdded.match(/n/g) && []",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 89,
+              "line": 51
+            },
+            "start": {
+              "column": 40,
+              "line": 51
+            }
+          }
+        },
+        {
+          "id": "37",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 89,
+              "line": 51
+            },
+            "start": {
+              "column": 87,
+              "line": 51
+            }
+          }
+        },
+        {
+          "id": "38",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 52
+            },
+            "start": {
+              "column": 32,
+              "line": 52
+            }
+          }
+        },
+        {
+          "id": "39",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 52
+            },
+            "start": {
+              "column": 32,
+              "line": 52
+            }
+          }
+        },
+        {
+          "id": "40",
+          "mutatorName": "LogicalOperator",
+          "replacement": "this.stats.coursesAdded.match(/n/g) && []",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 52
+            },
+            "start": {
+              "column": 32,
+              "line": 52
+            }
+          }
+        },
+        {
+          "id": "41",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 52
+            },
+            "start": {
+              "column": 71,
+              "line": 52
+            }
+          }
+        },
+        {
+          "id": "42",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 154,
+              "line": 53
+            },
+            "start": {
+              "column": 17,
+              "line": 53
+            }
+          }
+        },
+        {
+          "id": "43",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 154,
+              "line": 53
+            },
+            "start": {
+              "column": 38,
+              "line": 53
+            }
+          }
+        },
+        {
+          "id": "44",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 59
+            },
+            "start": {
+              "column": 23,
+              "line": 54
+            }
+          }
+        },
+        {
+          "id": "45",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 50,
+              "line": 55
+            },
+            "start": {
+              "column": 17,
+              "line": 55
+            }
+          }
+        },
+        {
+          "id": "46",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 50,
+              "line": 55
+            },
+            "start": {
+              "column": 17,
+              "line": 55
+            }
+          }
+        },
+        {
+          "id": "47",
+          "mutatorName": "EqualityOperator",
+          "replacement": "this.duplicateCourseInstances >= 0",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 50,
+              "line": 55
+            },
+            "start": {
+              "column": 17,
+              "line": 55
+            }
+          }
+        },
+        {
+          "id": "48",
+          "mutatorName": "EqualityOperator",
+          "replacement": "this.duplicateCourseInstances <= 0",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 50,
+              "line": 55
+            },
+            "start": {
+              "column": 17,
+              "line": 55
+            }
+          }
+        },
+        {
+          "id": "49",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 14,
+              "line": 58
+            },
+            "start": {
+              "column": 13,
+              "line": 56
+            }
+          }
+        },
+        {
+          "id": "50",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 105,
+              "line": 57
+            },
+            "start": {
+              "column": 39,
+              "line": 57
+            }
+          }
+        }
+      ],
+      "source": "import { Component, OnInit } from '@angular/core';\nimport { CoursesAddedStats } from 'src/app/models/courseaddedstats';\nimport { CourseOverview } from 'src/app/models/courseoverview';\nimport { CheckFileService } from 'src/app/services/check-file/check-file.service';\nimport { UploadFileService } from 'src/app/services/upload-file/uploadfile.service';\n\n@Component({\n  selector: 'isk-add-course',\n  templateUrl: './add-course.component.html',\n  styleUrls: ['./add-course.component.scss']\n})\nexport class AddCourseComponent implements OnInit {\n   \n  constructor (\n    private uploadFileService: UploadFileService,\n    private checkFileService : CheckFileService\n    ) { }\n\n  input : string = \"\";\n  message: string = \"\";\n  duplicateMessage : string = \"\";\n  errorMessage : string = \"\";\n  duplicateCourseInstances: number = 0;\n  newCourseInstances : number = 0;\n  newCourses : number = 0;\n  values: CourseOverview[] = [];\n  stats: CoursesAddedStats = {} as CoursesAddedStats;\n\n  getFile(event: any) : void {\n    console.log('GetFile');\n    this.duplicateCourseInstances = 0;\n    this.readFile(event.target.files[0]);\n  };\n\n  readFile = (file: any) => {\n    console.log('Read');\n    const fileReader : FileReader = new FileReader();\n    fileReader.onloadend = (ev) => {\n      const data = fileReader.result;\n      var txtData = data!.toString();\n      this.checkFileService.checkForErrors(txtData)\n        .then(x => this.errorMessage = x)\n        .then(() => {if(this.errorMessage === \"\") {\n          console.log('errorHandling');\n          this.values = this.uploadFileService.upload(txtData);\n          this.uploadFileService.PostCourses(this.values)\n          .then(x => (this.stats = x, console.log('stats update')))\n          .then(() => (\n            console.log('instance update'),\n            this.duplicateCourseInstances = (this.stats.courseInstancesAdded.match(/d/g) || []).length, \n            this.newCourseInstances = (this.stats.courseInstancesAdded.match(/n/g) || []).length,\n            this.newCourses = (this.stats.coursesAdded.match(/n/g) || []).length))\n          .then(() => this.message = `Er zijn ${ this.newCourses } nieuwe cursussen en ${ this.newCourseInstances } nieuwe cursus instanties toegevoegd!`)\n          .then(() => { \n            if (this.duplicateCourseInstances > 0) \n            {\n              this.duplicateMessage = `Er zijn ${this.duplicateCourseInstances} duplicaten tegengekomen`\n            }\n        })\n        }} \n      ) \n    }\n    fileReader.readAsText(file);\n  }\n  \n  ngOnInit(): void {\n  }\n\n}\n"
+    },
+    "src/app/components/course-overview/course-overview.component.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "66",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 56
+            },
+            "start": {
+              "column": 27,
+              "line": 47
+            }
+          }
+        },
+        {
+          "id": "67",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 55
+            },
+            "start": {
+              "column": 49,
+              "line": 52
+            }
+          }
+        },
+        {
+          "id": "68",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 54
+            },
+            "start": {
+              "column": 26,
+              "line": 54
+            }
+          }
+        },
+        {
+          "id": "69",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 67
+            },
+            "start": {
+              "column": 57,
+              "line": 58
+            }
+          }
+        },
+        {
+          "id": "70",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 64
+            },
+            "start": {
+              "column": 49,
+              "line": 61
+            }
+          }
+        },
+        {
+          "id": "71",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 63
+            },
+            "start": {
+              "column": 26,
+              "line": 63
+            }
+          }
+        },
+        {
+          "id": "72",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 80
+            },
+            "start": {
+              "column": 22,
+              "line": 69
+            }
+          }
+        },
+        {
+          "id": "73",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 83,
+              "line": 70
+            },
+            "start": {
+              "column": 16,
+              "line": 70
+            }
+          }
+        },
+        {
+          "id": "74",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 77
+            },
+            "start": {
+              "column": 49,
+              "line": 74
+            }
+          }
+        },
+        {
+          "id": "75",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 76
+            },
+            "start": {
+              "column": 26,
+              "line": 76
+            }
+          }
+        },
+        {
+          "id": "76",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 93
+            },
+            "start": {
+              "column": 22,
+              "line": 82
+            }
+          }
+        },
+        {
+          "id": "77",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() + 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 83,
+              "line": 83
+            },
+            "start": {
+              "column": 16,
+              "line": 83
+            }
+          }
+        },
+        {
+          "id": "78",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 90
+            },
+            "start": {
+              "column": 49,
+              "line": 87
+            }
+          }
+        },
+        {
+          "id": "79",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 89
+            },
+            "start": {
+              "column": 26,
+              "line": 89
+            }
+          }
+        },
+        {
+          "id": "52",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 28,
+              "line": 17
+            },
+            "start": {
+              "column": 24,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "51",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 16
+            },
+            "start": {
+              "column": 34,
+              "line": 16
+            }
+          }
+        },
+        {
+          "id": "53",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 32
+            },
+            "start": {
+              "column": 44,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "54",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 27
+            },
+            "start": {
+              "column": 50,
+              "line": 24
+            }
+          }
+        },
+        {
+          "id": "55",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[]",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 79,
+              "line": 25
+            },
+            "start": {
+              "column": 19,
+              "line": 25
+            }
+          }
+        },
+        {
+          "id": "56",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 24,
+              "line": 26
+            },
+            "start": {
+              "column": 20,
+              "line": 26
+            }
+          }
+        },
+        {
+          "id": "57",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 31
+            },
+            "start": {
+              "column": 50,
+              "line": 28
+            }
+          }
+        },
+        {
+          "id": "58",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[]",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 114,
+              "line": 29
+            },
+            "start": {
+              "column": 19,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "59",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "moment().year() + 5",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 75,
+              "line": 29
+            },
+            "start": {
+              "column": 56,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "60",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "moment().year() - 1",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 112,
+              "line": 29
+            },
+            "start": {
+              "column": 93,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "61",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 24,
+              "line": 30
+            },
+            "start": {
+              "column": 20,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "62",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "Error: 1 component threw errors during cleanup\n    at TestBedImpl.destroyActiveFixtures (node_modules/@angular/core/fesm2020/testing.mjs:26293:19)\n    at TestBedImpl.resetTestingModule (node_modules/@angular/core/fesm2020/testing.mjs:26106:18)\n    at UserContext.apply (node_modules/@angular/core/fesm2020/testing.mjs:26449:21)\n    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)\n    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)\n    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)\n    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)\n    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:582:34)\n    at UserContext.<anonymous> (node_modules/zone.js/fesm2015/zone-testing.js:597:20)\n    at <Jasmine>",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "0"
+          ],
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 36
+            },
+            "start": {
+              "column": 20,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "64",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 44
+            },
+            "start": {
+              "column": 49,
+              "line": 41
+            }
+          }
+        },
+        {
+          "id": "63",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "Error: 1 component threw errors during cleanup\n    at TestBedImpl.destroyActiveFixtures (node_modules/@angular/core/fesm2020/testing.mjs:26293:19)\n    at TestBedImpl.resetTestingModule (node_modules/@angular/core/fesm2020/testing.mjs:26106:18)\n    at UserContext.apply (node_modules/@angular/core/fesm2020/testing.mjs:26449:21)\n    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)\n    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)\n    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)\n    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)\n    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:582:34)\n    at UserContext.<anonymous> (node_modules/zone.js/fesm2015/zone-testing.js:597:20)\n    at <Jasmine>",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "0"
+          ],
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 45
+            },
+            "start": {
+              "column": 26,
+              "line": 38
+            }
+          }
+        },
+        {
+          "id": "65",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "true",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 31,
+              "line": 43
+            },
+            "start": {
+              "column": 26,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "80",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "0"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 97
+            },
+            "start": {
+              "column": 23,
+              "line": 95
+            }
+          }
+        }
+      ],
+      "source": "import { Component, OnInit } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\nimport * as moment from 'moment';\nimport { Subscription } from 'rxjs';\nimport { CourseOverview } from 'src/app/models/courseoverview';\nimport { CourseOverviewService } from 'src/app/services/course-overview/courseoverview.service';\n\n@Component({\n  selector: 'isk-course-overview',\n  templateUrl: './course-overview.component.html',\n  styleUrls: ['./course-overview.component.scss']\n})\nexport class CourseOverviewComponent implements OnInit {\n\n  subscription!: Subscription;\n  allcourses: CourseOverview[] = [];\n  isLoading: boolean = true;\n  currentWeek : number = moment().week();\n  currentYear : number = moment().year();\n  \n  constructor ( private courseOverviewService : CourseOverviewService ) { }\n  \n  getCoursesByWeekYearForm = new FormGroup({\n    chosenWeek: new FormControl(moment().week(), {\n      validators: [Validators.required, Validators.min(1), Validators.max(53)],\n      nonNullable: true\n    }),\n    chosenYear: new FormControl(moment().year(), { \n      validators: [Validators.required, Validators.min(moment().year() - 5), Validators.max(moment().year() + 1)],\n      nonNullable: true \n    })\n    });\n\n  ngOnInit(): void {\n    this.getAllCourses();\n  }\n\n  getAllCourses() : void {\n    this.subscription = this.courseOverviewService\n      .getAllCourses()\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.isLoading = false;\n      })\n  }\n\n  getCoursesWkYr() : void {\n    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue();\n    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();\n    this.subscription = this.courseOverviewService\n      .getCoursesByWeekYear(week, year)\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.isLoading = false;\n      })\n  }\n\n  getCoursesCurrWk(week : number, year : number) : void {\n    this.subscription = this.courseOverviewService\n      .getCoursesByWeekYear(week, year)\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.isLoading = false;\n      })\n    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);\n    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);\n  }\n\n  getCoursesNextWk() {\n    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() + 1;\n    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();\n    this.subscription = this.courseOverviewService\n      .getCoursesByWeekYear(week, year)\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.isLoading = false;\n      })\n    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);\n    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);\n  }\n\n  getCoursesPrevWk() {\n    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() - 1;\n    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();\n    this.subscription = this.courseOverviewService\n      .getCoursesByWeekYear(week, year)\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.isLoading = false;\n      })\n    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);\n    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);\n  }\n\n  ngOnDestroy(): void {\n    this.subscription.unsubscribe();\n  }\n\n}\n"
+    },
+    "src/app/models/courseaddedstats.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "90",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 30,
+              "line": 2
+            },
+            "start": {
+              "column": 28,
+              "line": 2
+            }
+          }
+        },
+        {
+          "id": "91",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 38,
+              "line": 3
+            },
+            "start": {
+              "column": 36,
+              "line": 3
+            }
+          }
+        }
+      ],
+      "source": "export class CoursesAddedStats {\r\n    coursesAdded: string = \"\";\r\n    courseInstancesAdded: string = \"\";\r\n}"
+    },
+    "src/app/models/courseoverview.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "92",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 28,
+              "line": 2
+            },
+            "start": {
+              "column": 26,
+              "line": 2
+            }
+          }
+        },
+        {
+          "id": "93",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 4
+            },
+            "start": {
+              "column": 21,
+              "line": 4
+            }
+          }
+        },
+        {
+          "id": "94",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 29,
+              "line": 5
+            },
+            "start": {
+              "column": 27,
+              "line": 5
+            }
+          }
+        }
+      ],
+      "source": "export class CourseOverview {\r\n    startDate?: string = \"\"\r\n    duration: number = 0\r\n    title: string = \"\"\r\n    courseCode?: string = \"\"\r\n}"
+    },
+    "src/app/services/check-file/check-file.service.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "95",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 56
+            },
+            "start": {
+              "column": 55,
+              "line": 7
+            }
+          }
+        },
+        {
+          "id": "96",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 32,
+              "line": 8
+            },
+            "start": {
+              "column": 28,
+              "line": 8
+            }
+          }
+        },
+        {
+          "id": "97",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 30,
+              "line": 10
+            },
+            "start": {
+              "column": 28,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "98",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 12
+            },
+            "start": {
+              "column": 20,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "99",
+          "mutatorName": "EqualityOperator",
+          "replacement": "i <= lines.length - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 12
+            },
+            "start": {
+              "column": 20,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "100",
+          "mutatorName": "EqualityOperator",
+          "replacement": "i >= lines.length - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 12
+            },
+            "start": {
+              "column": 20,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "101",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "lines.length + 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 12
+            },
+            "start": {
+              "column": 24,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "102",
+          "mutatorName": "UpdateOperator",
+          "replacement": "i--",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 45,
+              "line": 12
+            },
+            "start": {
+              "column": 42,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "103",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 54
+            },
+            "start": {
+              "column": 47,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "104",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "case 0:",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 19
+            },
+            "start": {
+              "column": 9,
+              "line": 14
+            }
+          }
+        },
+        {
+          "id": "105",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 19
+            },
+            "start": {
+              "column": 17,
+              "line": 14
+            }
+          }
+        },
+        {
+          "id": "106",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "lines[i].startsWith('Titel:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 44,
+              "line": 15
+            },
+            "start": {
+              "column": 14,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "107",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 44,
+              "line": 15
+            },
+            "start": {
+              "column": 14,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "108",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 44,
+              "line": 15
+            },
+            "start": {
+              "column": 14,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "109",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Titel:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 44,
+              "line": 15
+            },
+            "start": {
+              "column": 15,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "110",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 43,
+              "line": 15
+            },
+            "start": {
+              "column": 35,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "111",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 12,
+              "line": 17
+            },
+            "start": {
+              "column": 46,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "112",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 64,
+              "line": 16
+            },
+            "start": {
+              "column": 23,
+              "line": 16
+            }
+          }
+        },
+        {
+          "id": "113",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "i - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 16
+            },
+            "start": {
+              "column": 32,
+              "line": 16
+            }
+          }
+        },
+        {
+          "id": "114",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "case 1:",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 25
+            },
+            "start": {
+              "column": 9,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "115",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 25
+            },
+            "start": {
+              "column": 17,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "116",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "lines[i].startsWith('Cursuscode:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 21
+            },
+            "start": {
+              "column": 14,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "117",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 21
+            },
+            "start": {
+              "column": 14,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "118",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 21
+            },
+            "start": {
+              "column": 14,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "119",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Cursuscode:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 21
+            },
+            "start": {
+              "column": 15,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "120",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 21
+            },
+            "start": {
+              "column": 35,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "121",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 12,
+              "line": 23
+            },
+            "start": {
+              "column": 51,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "122",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 69,
+              "line": 22
+            },
+            "start": {
+              "column": 23,
+              "line": 22
+            }
+          }
+        },
+        {
+          "id": "123",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "i - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 22
+            },
+            "start": {
+              "column": 32,
+              "line": 22
+            }
+          }
+        },
+        {
+          "id": "124",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "case 2:",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 31
+            },
+            "start": {
+              "column": 9,
+              "line": 26
+            }
+          }
+        },
+        {
+          "id": "125",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 31
+            },
+            "start": {
+              "column": 17,
+              "line": 26
+            }
+          }
+        },
+        {
+          "id": "126",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 27
+            },
+            "start": {
+              "column": 14,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "127",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 27
+            },
+            "start": {
+              "column": 14,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "128",
+          "mutatorName": "LogicalOperator",
+          "replacement": "!lines[i].startsWith('Duur:') && !lines[i].endsWith('dagen')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 27
+            },
+            "start": {
+              "column": 14,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "129",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "lines[i].startsWith('Duur:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 43,
+              "line": 27
+            },
+            "start": {
+              "column": 14,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "130",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Duur:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 43,
+              "line": 27
+            },
+            "start": {
+              "column": 15,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "131",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 42,
+              "line": 27
+            },
+            "start": {
+              "column": 35,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "132",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "lines[i].endsWith('dagen')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 27
+            },
+            "start": {
+              "column": 47,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "133",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].startsWith('dagen')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 74,
+              "line": 27
+            },
+            "start": {
+              "column": 48,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "134",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 27
+            },
+            "start": {
+              "column": 66,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "135",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 12,
+              "line": 29
+            },
+            "start": {
+              "column": 76,
+              "line": 27
+            }
+          }
+        },
+        {
+          "id": "136",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 89,
+              "line": 28
+            },
+            "start": {
+              "column": 23,
+              "line": 28
+            }
+          }
+        },
+        {
+          "id": "137",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "i - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 28
+            },
+            "start": {
+              "column": 32,
+              "line": 28
+            }
+          }
+        },
+        {
+          "id": "138",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "case 3:",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 37
+            },
+            "start": {
+              "column": 9,
+              "line": 32
+            }
+          }
+        },
+        {
+          "id": "139",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 37
+            },
+            "start": {
+              "column": 17,
+              "line": 32
+            }
+          }
+        },
+        {
+          "id": "140",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 102,
+              "line": 33
+            },
+            "start": {
+              "column": 14,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "141",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 102,
+              "line": 33
+            },
+            "start": {
+              "column": 14,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "142",
+          "mutatorName": "LogicalOperator",
+          "replacement": "!lines[i].startsWith('Startdatum:') && !/[0-9]{1,2}\\/[0-9]{2}\\/[0-9]{4}$/.test(lines[i])",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 102,
+              "line": 33
+            },
+            "start": {
+              "column": 14,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "143",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "lines[i].startsWith('Startdatum:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 33
+            },
+            "start": {
+              "column": 14,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "144",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Startdatum:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 49,
+              "line": 33
+            },
+            "start": {
+              "column": 15,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "145",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 33
+            },
+            "start": {
+              "column": 35,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "146",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "/[0-9]{1,2}\\/[0-9]{2}\\/[0-9]{4}$/.test(lines[i])",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 102,
+              "line": 33
+            },
+            "start": {
+              "column": 53,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "147",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]{1,2}\\/[0-9]{2}\\/[0-9]{4}/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "148",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]\\/[0-9]{2}\\/[0-9]{4}$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "149",
+          "mutatorName": "Regex",
+          "replacement": "/[^0-9]{1,2}\\/[0-9]{2}\\/[0-9]{4}$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "150",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]{1,2}\\/[0-9]\\/[0-9]{4}$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "151",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]{1,2}\\/[^0-9]{2}\\/[0-9]{4}$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "152",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]{1,2}\\/[0-9]{2}\\/[0-9]$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "153",
+          "mutatorName": "Regex",
+          "replacement": "/[0-9]{1,2}\\/[0-9]{2}\\/[^0-9]{4}$/",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 87,
+              "line": 33
+            },
+            "start": {
+              "column": 54,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "154",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 12,
+              "line": 35
+            },
+            "start": {
+              "column": 104,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "155",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 99,
+              "line": 34
+            },
+            "start": {
+              "column": 23,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "156",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "i - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 34
+            },
+            "start": {
+              "column": 32,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "157",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "case 4:",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 43
+            },
+            "start": {
+              "column": 9,
+              "line": 38
+            }
+          }
+        },
+        {
+          "id": "158",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 43
+            },
+            "start": {
+              "column": 17,
+              "line": 38
+            }
+          }
+        },
+        {
+          "id": "159",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 34,
+              "line": 39
+            },
+            "start": {
+              "column": 14,
+              "line": 39
+            }
+          }
+        },
+        {
+          "id": "160",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 34,
+              "line": 39
+            },
+            "start": {
+              "column": 14,
+              "line": 39
+            }
+          }
+        },
+        {
+          "id": "161",
+          "mutatorName": "EqualityOperator",
+          "replacement": "lines[i].length == 0",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 34,
+              "line": 39
+            },
+            "start": {
+              "column": 14,
+              "line": 39
+            }
+          }
+        },
+        {
+          "id": "162",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 12,
+              "line": 41
+            },
+            "start": {
+              "column": 36,
+              "line": 39
+            }
+          }
+        },
+        {
+          "id": "163",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 61,
+              "line": 40
+            },
+            "start": {
+              "column": 23,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "164",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "i - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 37,
+              "line": 40
+            },
+            "start": {
+              "column": 32,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "165",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 45
+            },
+            "start": {
+              "column": 10,
+              "line": 45
+            }
+          }
+        },
+        {
+          "id": "166",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 45
+            },
+            "start": {
+              "column": 10,
+              "line": 45
+            }
+          }
+        },
+        {
+          "id": "167",
+          "mutatorName": "EqualityOperator",
+          "replacement": "message == \"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 45
+            },
+            "start": {
+              "column": 10,
+              "line": 45
+            }
+          }
+        },
+        {
+          "id": "168",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 45
+            },
+            "start": {
+              "column": 21,
+              "line": 45
+            }
+          }
+        },
+        {
+          "id": "169",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 47
+            },
+            "start": {
+              "column": 25,
+              "line": 45
+            }
+          }
+        },
+        {
+          "id": "170",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 29,
+              "line": 48
+            },
+            "start": {
+              "column": 16,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "171",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 29,
+              "line": 48
+            },
+            "start": {
+              "column": 16,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "172",
+          "mutatorName": "EqualityOperator",
+          "replacement": "counter !== 4",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 29,
+              "line": 48
+            },
+            "start": {
+              "column": 16,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "173",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 50
+            },
+            "start": {
+              "column": 31,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "174",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 53
+            },
+            "start": {
+              "column": 12,
+              "line": 51
+            }
+          }
+        },
+        {
+          "id": "175",
+          "mutatorName": "UpdateOperator",
+          "replacement": "counter--",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 18,
+              "line": 52
+            },
+            "start": {
+              "column": 9,
+              "line": 52
+            }
+          }
+        }
+      ],
+      "source": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class CheckFileService {\n  async checkForErrors(text: string): Promise<string> {\n    let lines = text.split('\\n');\n    let counter : number = 0;\n    let message : string = \"\";\n\n    for(var i = 0; i < lines.length - 1; i++) {\n      switch(counter) {\n        case 0: {\n          if(!lines[i].startsWith('Titel:')) {\n            message = `Regel ${i + 1} start niet met 'Titel:'!`\n          }\n          break;\n        }\n        case 1: {\n          if(!lines[i].startsWith('Cursuscode:')) {\n            message = `Regel ${i + 1} start niet met 'Cursuscode:'!`\n          }\n          break;\n        }\n        case 2: {\n          if(!lines[i].startsWith('Duur:') || !lines[i].endsWith('dagen')) {\n            message = `Regel ${i + 1} start niet met 'Duur:' of eindigt niet met dagen!`\n          }\n          break;\n        }\n        case 3: {\n          if(!lines[i].startsWith('Startdatum:') || !/[0-9]{1,2}\\/[0-9]{2}\\/[0-9]{4}$/.test(lines[i])) {\n            message = `Regel ${i + 1} start niet met 'Startdatum:' of heeft een incorrect format!`\n          }\n          break;\n        }\n        case 4: {\n          if(lines[i].length != 0) {\n            message = `Regel ${i + 1} zou leeg moeten zijn!`\n          }\n          break;\n        }\n      }\n      if(message != \"\") {\n          break;\n      }\n      else if (counter === 4) {\n        counter = 0;\n      }\n      else {\n        counter++;\n      }\n    }\n    return await message;\n  }\n\n  constructor() { }\n}\n"
+    },
+    "src/app/services/course-overview/courseoverview.service.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "176",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 53,
+              "line": 13
+            },
+            "start": {
+              "column": 51,
+              "line": 13
+            }
+          }
+        },
+        {
+          "id": "177",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 68,
+              "line": 14
+            },
+            "start": {
+              "column": 28,
+              "line": 14
+            }
+          }
+        },
+        {
+          "id": "178",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 73,
+              "line": 15
+            },
+            "start": {
+              "column": 28,
+              "line": 15
+            }
+          }
+        },
+        {
+          "id": "179",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 16
+            },
+            "start": {
+              "column": 34,
+              "line": 16
+            }
+          }
+        },
+        {
+          "id": "180",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 27
+            },
+            "start": {
+              "column": 50,
+              "line": 18
+            }
+          }
+        },
+        {
+          "id": "181",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 24
+            },
+            "start": {
+              "column": 49,
+              "line": 21
+            }
+          }
+        },
+        {
+          "id": "182",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 42
+            },
+            "start": {
+              "column": 84,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "183",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 19,
+              "line": 30
+            },
+            "start": {
+              "column": 9,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "184",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 19,
+              "line": 30
+            },
+            "start": {
+              "column": 9,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "185",
+          "mutatorName": "EqualityOperator",
+          "replacement": "week !== 0",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 19,
+              "line": 30
+            },
+            "start": {
+              "column": 9,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "186",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 33
+            },
+            "start": {
+              "column": 21,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "187",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 45,
+              "line": 34
+            },
+            "start": {
+              "column": 39,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "188",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 63,
+              "line": 34
+            },
+            "start": {
+              "column": 57,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "189",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 69,
+              "line": 36
+            },
+            "start": {
+              "column": 51,
+              "line": 36
+            }
+          }
+        },
+        {
+          "id": "190",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 40
+            },
+            "start": {
+              "column": 49,
+              "line": 37
+            }
+          }
+        }
+      ],
+      "source": "import { Injectable } from '@angular/core';\nimport { HttpClient, HttpParams } from '@angular/common/http';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { CourseOverview } from 'src/app/models/courseoverview';\nimport * as moment from 'moment';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class CourseOverviewService {\n  constructor( private httpClient : HttpClient ) { }\n\n  subject = new BehaviorSubject<CourseOverview[]>([]);\n  urlAllCourses : string = \"https://localhost:7125/api/courses/all\"\n  urlWkYrCourses: string = \"https://localhost:7125/api/courses/weekyear\"\n  allcourses: CourseOverview[] = [];\n\n  getAllCourses() : Observable<CourseOverview[]> {\n    this.httpClient\n      .get<CourseOverview[]>(this.urlAllCourses)\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.subject.next(courses);\n      });\n\n    return this.subject.asObservable();\n  };\n\n  getCoursesByWeekYear(week: number, year : number) : Observable<CourseOverview[]> {\n    if (week === 0) {\n      week = moment().week();\n      year = moment().year();\n    }\n    let params = new HttpParams().set(\"week\", week).set(\"year\", year);\n    this.httpClient\n      .get<CourseOverview[]>(this.urlWkYrCourses, { params: params })\n      .subscribe((courses: CourseOverview[]) => {\n        this.allcourses = courses;\n        this.subject.next(courses);\n      });\n    return this.subject.asObservable();\n  };\n\n}\n"
+    },
+    "src/app/services/upload-file/uploadfile.service.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "191",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 17
+            },
+            "start": {
+              "column": 33,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "192",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 21
+            },
+            "start": {
+              "column": 17,
+              "line": 19
+            }
+          }
+        },
+        {
+          "id": "193",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 66,
+              "line": 20
+            },
+            "start": {
+              "column": 30,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "194",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 65,
+              "line": 20
+            },
+            "start": {
+              "column": 47,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "195",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 3,
+              "line": 56
+            },
+            "start": {
+              "column": 42,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "196",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 24
+            },
+            "start": {
+              "column": 17,
+              "line": 24
+            }
+          }
+        },
+        {
+          "id": "197",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 32,
+              "line": 26
+            },
+            "start": {
+              "column": 28,
+              "line": 26
+            }
+          }
+        },
+        {
+          "id": "198",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 29
+            },
+            "start": {
+              "column": 20,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "199",
+          "mutatorName": "EqualityOperator",
+          "replacement": "i <= lines.length",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 29
+            },
+            "start": {
+              "column": 20,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "200",
+          "mutatorName": "EqualityOperator",
+          "replacement": "i >= lines.length",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 29
+            },
+            "start": {
+              "column": 20,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "201",
+          "mutatorName": "UpdateOperator",
+          "replacement": "i--",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 29
+            },
+            "start": {
+              "column": 38,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "202",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 54
+            },
+            "start": {
+              "column": 43,
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "203",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 30
+            },
+            "start": {
+              "column": 10,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "204",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 30
+            },
+            "start": {
+              "column": 10,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "205",
+          "mutatorName": "EqualityOperator",
+          "replacement": "lines[i] === \"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 30
+            },
+            "start": {
+              "column": 10,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "206",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"Stryker was here!\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 25,
+              "line": 30
+            },
+            "start": {
+              "column": 23,
+              "line": 30
+            }
+          }
+        },
+        {
+          "id": "207",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 46
+            },
+            "start": {
+              "column": 7,
+              "line": 31
+            }
+          }
+        },
+        {
+          "id": "208",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "lines[i].indexOf(\":\") - 2",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 46,
+              "line": 32
+            },
+            "start": {
+              "column": 21,
+              "line": 32
+            }
+          }
+        },
+        {
+          "id": "209",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 32
+            },
+            "start": {
+              "column": 38,
+              "line": 32
+            }
+          }
+        },
+        {
+          "id": "210",
+          "mutatorName": "UpdateOperator",
+          "replacement": "counter--",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 19,
+              "line": 33
+            },
+            "start": {
+              "column": 9,
+              "line": 33
+            }
+          }
+        },
+        {
+          "id": "211",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 34
+            },
+            "start": {
+              "column": 12,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "212",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 34
+            },
+            "start": {
+              "column": 12,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "213",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Titel:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 34
+            },
+            "start": {
+              "column": 12,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "214",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 40,
+              "line": 34
+            },
+            "start": {
+              "column": 32,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "215",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 36
+            },
+            "start": {
+              "column": 43,
+              "line": 34
+            }
+          }
+        },
+        {
+          "id": "216",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 48,
+              "line": 35
+            },
+            "start": {
+              "column": 23,
+              "line": 35
+            }
+          }
+        },
+        {
+          "id": "217",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 37
+            },
+            "start": {
+              "column": 18,
+              "line": 37
+            }
+          }
+        },
+        {
+          "id": "218",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 37
+            },
+            "start": {
+              "column": 18,
+              "line": 37
+            }
+          }
+        },
+        {
+          "id": "219",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Cursuscode:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 37
+            },
+            "start": {
+              "column": 18,
+              "line": 37
+            }
+          }
+        },
+        {
+          "id": "220",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 51,
+              "line": 37
+            },
+            "start": {
+              "column": 38,
+              "line": 37
+            }
+          }
+        },
+        {
+          "id": "221",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 39
+            },
+            "start": {
+              "column": 54,
+              "line": 37
+            }
+          }
+        },
+        {
+          "id": "222",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 53,
+              "line": 38
+            },
+            "start": {
+              "column": 28,
+              "line": 38
+            }
+          }
+        },
+        {
+          "id": "223",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 46,
+              "line": 40
+            },
+            "start": {
+              "column": 18,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "224",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 46,
+              "line": 40
+            },
+            "start": {
+              "column": 18,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "225",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Duur:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 46,
+              "line": 40
+            },
+            "start": {
+              "column": 18,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "226",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 45,
+              "line": 40
+            },
+            "start": {
+              "column": 38,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "227",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 42
+            },
+            "start": {
+              "column": 48,
+              "line": 40
+            }
+          }
+        },
+        {
+          "id": "228",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 71,
+              "line": 41
+            },
+            "start": {
+              "column": 35,
+              "line": 41
+            }
+          }
+        },
+        {
+          "id": "229",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "index - 1",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 70,
+              "line": 41
+            },
+            "start": {
+              "column": 61,
+              "line": 41
+            }
+          }
+        },
+        {
+          "id": "230",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 43
+            },
+            "start": {
+              "column": 18,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "231",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 43
+            },
+            "start": {
+              "column": 18,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "232",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i].endsWith('Startdatum:')",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 43
+            },
+            "start": {
+              "column": 18,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "233",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 51,
+              "line": 43
+            },
+            "start": {
+              "column": 38,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "234",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 45
+            },
+            "start": {
+              "column": 54,
+              "line": 43
+            }
+          }
+        },
+        {
+          "id": "235",
+          "mutatorName": "MethodExpression",
+          "replacement": "lines[i]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 52,
+              "line": 44
+            },
+            "start": {
+              "column": 27,
+              "line": 44
+            }
+          }
+        },
+        {
+          "id": "236",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 8,
+              "line": 53
+            },
+            "start": {
+              "column": 12,
+              "line": 47
+            }
+          }
+        },
+        {
+          "id": "237",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 48
+            },
+            "start": {
+              "column": 13,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "238",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 48
+            },
+            "start": {
+              "column": 13,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "239",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 10,
+              "line": 52
+            },
+            "start": {
+              "column": 38,
+              "line": 48
+            }
+          }
+        },
+        {
+          "id": "240",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 64
+            },
+            "start": {
+              "column": 71,
+              "line": 58
+            }
+          }
+        },
+        {
+          "id": "241",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 59
+            },
+            "start": {
+              "column": 17,
+              "line": 59
+            }
+          }
+        },
+        {
+          "id": "242",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 109,
+              "line": 60
+            },
+            "start": {
+              "column": 73,
+              "line": 60
+            }
+          }
+        },
+        {
+          "id": "243",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 32,
+              "line": 61
+            },
+            "start": {
+              "column": 17,
+              "line": 61
+            }
+          }
+        },
+        {
+          "id": "244",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[\"Stryker was here\"]",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 23,
+              "line": 62
+            },
+            "start": {
+              "column": 21,
+              "line": 62
+            }
+          }
+        }
+      ],
+      "source": "import { formatDate } from '@angular/common';\nimport { HttpClient, HttpErrorResponse, HttpEvent, HttpHeaders, HttpRequest } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { BehaviorSubject, catchError, firstValueFrom, Observable, throwError } from 'rxjs';\nimport { CoursesAddedStats } from 'src/app/models/courseaddedstats';\nimport { CourseOverview } from 'src/app/models/courseoverview';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UploadFileService {\n\n  constructor (private http: HttpClient) {}\n\n  stats : CoursesAddedStats = {} as CoursesAddedStats;\n\n  objArray : CourseOverview[] = [];\n\n  httpOptions = {\n    headers: new HttpHeaders({'Content-Type': 'application/json'})\n  }\n\n  upload(text: string): CourseOverview[] {\n    console.log('Upload');\n    var obj : CourseOverview = {} as CourseOverview;\n    var lines = text.split('\\n');\n    let counter = 0;\n\n    for(var i = 0; i < lines.length; i++) {\n      if(lines[i] !== \"\")\n      {\n        let index = lines[i].indexOf(\":\") + 2\n        counter ++;\n        if(lines[i].startsWith('Titel:')) {\n          obj.title = lines[i].substring(index)\n        }\n        else if (lines[i].startsWith('Cursuscode:')) {\n          obj.courseCode = lines[i].substring(index)\n        }\n        else if (lines[i].startsWith('Duur:')) {\n          obj.duration = parseInt(lines[i].substring(index, index + 1));\n        }\n        else if (lines[i].startsWith('Startdatum:')) {\n          obj.startDate = lines[i].substring(index)\n        }\n      }\n      else {\n        if (Object.keys(obj).length) {\n          this.objArray.push(obj as CourseOverview);\n          counter = 0;\n          obj = {} as CourseOverview;\n        }\n      }\n    }\n    return this.objArray;\n }\n\n  async PostCourses(objArray : object[]) : Promise<CoursesAddedStats> {\n    console.log('Post');\n    this.stats = await firstValueFrom(this.http.post<CoursesAddedStats>('https://localhost:7125/api/courses', objArray, this.httpOptions))\n    console.log('Post complete')\n    this.objArray = [];\n    return this.stats;\n  }\n\n  \n}\n"
+    },
+    "src/main.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "245",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 27,
+              "line": 7
+            },
+            "start": {
+              "column": 5,
+              "line": 7
+            }
+          }
+        },
+        {
+          "id": "246",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 27,
+              "line": 7
+            },
+            "start": {
+              "column": 5,
+              "line": 7
+            }
+          }
+        },
+        {
+          "id": "247",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 9
+            },
+            "start": {
+              "column": 29,
+              "line": 7
+            }
+          }
+        },
+        {
+          "id": "248",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "status": "NoCoverage",
+          "static": false,
+          "coveredBy": [],
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 12
+            },
+            "start": {
+              "column": 10,
+              "line": 12
+            }
+          }
+        }
+      ],
+      "source": "import { enableProdMode } from '@angular/core';\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\n\nimport { AppModule } from './app/app.module';\nimport { environment } from './environments/environment';\n\nif (environment.production) {\n  enableProdMode();\n}\n\nplatformBrowserDynamic().bootstrapModule(AppModule)\n  .catch(err => console.error(err));\n"
+    },
+    "src/app/components/courses-by-week-form/courses-by-week-form.component.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "81",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 26
+            },
+            "start": {
+              "column": 44,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "82",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 21
+            },
+            "start": {
+              "column": 50,
+              "line": 18
+            }
+          }
+        },
+        {
+          "id": "83",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[]",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 79,
+              "line": 19
+            },
+            "start": {
+              "column": 19,
+              "line": 19
+            }
+          }
+        },
+        {
+          "id": "84",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 24,
+              "line": 20
+            },
+            "start": {
+              "column": 20,
+              "line": 20
+            }
+          }
+        },
+        {
+          "id": "86",
+          "mutatorName": "ArrayDeclaration",
+          "replacement": "[]",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 114,
+              "line": 23
+            },
+            "start": {
+              "column": 19,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "85",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 25
+            },
+            "start": {
+              "column": 50,
+              "line": 22
+            }
+          }
+        },
+        {
+          "id": "87",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "moment().year() + 5",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 75,
+              "line": 23
+            },
+            "start": {
+              "column": 56,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "88",
+          "mutatorName": "ArithmeticOperator",
+          "replacement": "moment().year() - 1",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 112,
+              "line": 23
+            },
+            "start": {
+              "column": 93,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "89",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "false",
+          "status": "Survived",
+          "static": false,
+          "testsCompleted": 1,
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 24,
+              "line": 24
+            },
+            "start": {
+              "column": 20,
+              "line": 24
+            }
+          }
+        }
+      ],
+      "source": "import { Component, OnInit } from '@angular/core';\nimport { FormControl, FormGroup, Validators } from '@angular/forms';\nimport * as moment from 'moment';\n\n@Component({\n  selector: 'isk-courses-by-week-form',\n  templateUrl: './courses-by-week-form.component.html',\n  styleUrls: ['./courses-by-week-form.component.scss']\n})\nexport class CoursesByWeekFormComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  getCoursesByWeekYearForm = new FormGroup({\n    chosenWeek: new FormControl(moment().week(), {\n      validators: [Validators.required, Validators.min(1), Validators.max(53)],\n      nonNullable: true\n    }),\n    chosenYear: new FormControl(moment().year(), { \n      validators: [Validators.required, Validators.min(moment().year() - 5), Validators.max(moment().year() + 1)],\n      nonNullable: true \n    })\n    });\n\n}\n"
+    }
+  },
+  "schemaVersion": "1.0",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "testFiles": {
+    "": {
+      "tests": [
+        {
+          "id": "0",
+          "name": "Component: CourseOverviewComponent Should return true"
+        },
+        {
+          "id": "1",
+          "name": "CoursesByWeekFormComponent should create"
+        },
+        {
+          "id": "2",
+          "name": "HomeComponent should create"
+        }
+      ]
+    }
+  },
+  "projectRoot": "C:\\Users\\pc\\Desktop\\CourseApp Angular\\course-app",
+  "config": {
+    "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+    "_comment": "This config was generated using 'stryker init'. Please see the guide for more information: https://stryker-mutator.io/docs/stryker-js/guides/angular",
+    "mutate": [
+      "src/**/*.ts",
+      "!src/**/*.spec.ts",
+      "!src/test.ts",
+      "!src/environments/*.ts"
+    ],
+    "testRunner": "karma",
+    "karma": {
+      "configFile": "karma.conf.js",
+      "projectType": "angular-cli",
+      "config": {
+        "browsers": [
+          "ChromeHeadless"
+        ]
+      }
+    },
+    "reporters": [
+      "progress",
+      "clear-text",
+      "html"
+    ],
+    "concurrency": 4,
+    "concurrency_comment": "Recommended to use about half of your available cores when running stryker with angular",
+    "coverageAnalysis": "perTest",
+    "incremental": true,
+    "allowConsoleColors": true,
+    "checkers": [],
+    "checkerNodeArgs": [],
+    "commandRunner": {
+      "command": "npm test"
+    },
+    "clearTextReporter": {
+      "allowColor": true,
+      "logTests": true,
+      "maxTestsToLog": 3
+    },
+    "dashboard": {
+      "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+      "reportType": "full"
+    },
+    "eventReporter": {
+      "baseDir": "reports/mutation/events"
+    },
+    "ignorePatterns": [],
+    "ignoreStatic": false,
+    "incrementalFile": "reports/stryker-incremental.json",
+    "force": false,
+    "fileLogLevel": "off",
+    "inPlace": false,
+    "logLevel": "info",
+    "maxConcurrentTestRunners": 9007199254740991,
+    "maxTestRunnerReuse": 0,
+    "mutator": {
+      "plugins": null,
+      "excludedMutations": []
+    },
+    "plugins": [
+      "@stryker-mutator/*"
+    ],
+    "appendPlugins": [],
+    "htmlReporter": {
+      "fileName": "reports/mutation/mutation.html"
+    },
+    "jsonReporter": {
+      "fileName": "reports/mutation/mutation.json"
+    },
+    "disableTypeChecks": "{test,src,lib}/**/*.{js,ts,jsx,tsx,html,vue}",
+    "symlinkNodeModules": true,
+    "tempDirName": ".stryker-tmp",
+    "cleanTempDir": true,
+    "testRunnerNodeArgs": [],
+    "thresholds": {
+      "high": 80,
+      "low": 60,
+      "break": null
+    },
+    "timeoutFactor": 1.5,
+    "timeoutMS": 5000,
+    "dryRunTimeoutMinutes": 5,
+    "tsconfigFile": "tsconfig.json",
+    "warnings": true,
+    "disableBail": false
+  },
+  "framework": {
+    "name": "StrykerJS",
+    "version": "6.2.2",
+    "branding": {
+      "homepageUrl": "https://stryker-mutator.io",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg viewBox='0 0 1458 1458' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='none' d='M0 0h1458v1458H0z'/%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h1458v1458H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M1458 729c0 402.655-326.345 729-729 729S0 1131.655 0 729C0 326.445 326.345 0 729 0s729 326.345 729 729' fill='%23e74c3c' fill-rule='nonzero'/%3E%3Cpath d='M778.349 1456.15L576.6 1254.401l233-105 85-78.668v-64.332l-257-257-44-187-50-208 251.806-82.793L1076.6 389.401l380.14 379.15c-19.681 367.728-311.914 663.049-678.391 687.599z' fill-opacity='.3'/%3E%3Cpath d='M753.4 329.503c41.79 0 74.579 7.83 97.925 25.444 23.571 18.015 41.69 43.956 55.167 77.097l11.662 28.679 165.733-58.183-14.137-32.13c-26.688-60.655-64.896-108.61-114.191-144.011-49.329-35.423-117.458-54.302-204.859-54.302-50.78 0-95.646 7.376-134.767 21.542-40.093 14.671-74.09 34.79-102.239 60.259-28.84 26.207-50.646 57.06-65.496 92.701-14.718 35.052-22.101 72.538-22.101 112.401 0 72.536 20.667 133.294 61.165 182.704 38.624 47.255 98.346 88.037 179.861 121.291 42.257 17.475 78.715 33.125 109.227 46.994 27.193 12.361 49.294 26.124 66.157 41.751 15.309 14.186 26.497 30.584 33.63 49.258 7.721 20.214 11.16 45.69 11.16 76.402 0 28.021-4.251 51.787-13.591 71.219-8.832 18.374-20.171 33.178-34.523 44.219-14.787 11.374-31.193 19.591-49.393 24.466-19.68 5.359-39.14 7.993-58.69 7.993-29.359 0-54.387-3.407-75.182-10.747-20.112-7.013-37.144-16.144-51.259-27.486-13.618-11.009-24.971-23.766-33.744-38.279-9.64-15.8-17.272-31.924-23.032-48.408l-10.965-31.376-161.669 60.585 10.734 30.124c10.191 28.601 24.197 56.228 42.059 82.748 18.208 27.144 41.322 51.369 69.525 72.745 27.695 21.075 60.904 38.218 99.481 51.041 37.777 12.664 82.004 19.159 132.552 19.159 49.998 0 95.818-8.321 137.611-24.622 42.228-16.471 78.436-38.992 108.835-67.291 30.719-28.597 54.631-62.103 71.834-100.642 17.263-38.56 25.923-79.392 25.923-122.248 0-54.339-8.368-100.37-24.208-138.32-16.29-38.759-38.252-71.661-65.948-98.797-26.965-26.418-58.269-48.835-93.858-67.175-33.655-17.241-69.196-33.11-106.593-47.533-35.934-13.429-65.822-26.601-89.948-39.525-22.153-11.868-40.009-24.21-53.547-37.309-11.429-11.13-19.83-23.678-24.718-37.664-5.413-15.49-7.98-33.423-7.98-53.577 0-40.883 11.293-71.522 37.086-90.539 28.443-20.825 64.985-30.658 109.311-30.658z' fill='%23f1c40f' fill-rule='nonzero'/%3E%3Cpath d='M720 0h18v113h-18zM1458 738v-18h-113v18h113zM720 1345h18v113h-18zM113 738v-18H0v18h113z'/%3E%3C/g%3E%3C/svg%3E"
+    },
+    "dependencies": {
+      "@stryker-mutator/karma-runner": "6.2.2",
+      "karma": "6.4.0",
+      "karma-chrome-launcher": "3.1.1",
+      "karma-jasmine": "5.1.0",
+      "jasmine-core": "4.3.0",
+      "typescript": "4.7.4",
+      "@angular/cli": "14.2.3",
+      "webpack": "5.74.0"
+    }
+  }
+}

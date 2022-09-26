@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesAddedStats } from 'src/app/models/courseaddedstats';
-import { CourseOverview } from 'src/app/models/courseoverview';
+import { CourseMutations, CreateCourseMutation } from 'src/app/models/coursemutations';
+import { ErrorResult } from 'src/app/models/errorresult';
 import { CheckFileService } from 'src/app/services/check-file/check-file.service';
 import { UploadFileService } from 'src/app/services/upload-file/uploadfile.service';
 
@@ -16,53 +17,39 @@ export class AddCourseComponent implements OnInit {
     private checkFileService : CheckFileService
     ) { }
 
-  input : string = "";
   message: string = "";
   duplicateMessage : string = "";
   errorMessage : string = "";
-  duplicateCourseInstances: number = 0;
-  newCourseInstances : number = 0;
-  newCourses : number = 0;
-  values: CourseOverview[] = [];
-  stats: CoursesAddedStats = {} as CoursesAddedStats;
+  showMessage = false;
+  showDuplicateMessage = false;
+  showErrorMessage = false;
 
-  getFile(event: any) : void {
-    console.log('GetFile');
-    this.duplicateCourseInstances = 0;
-    this.readFile(event.target.files[0]);
-  };
-
-  readFile = (file: any) => {
-    console.log('Read');
-    const fileReader : FileReader = new FileReader();
-    fileReader.onloadend = (ev) => {
-      const data = fileReader.result;
-      var txtData = data!.toString();
-      this.checkFileService.checkForErrors(txtData)
-        .then(x => this.errorMessage = x)
-        .then(() => {if(this.errorMessage === "") {
-          console.log('errorHandling');
-          this.values = this.uploadFileService.upload(txtData);
-          this.uploadFileService.PostCourses(this.values)
-          .then(x => (this.stats = x, console.log('stats update')))
-          .then(() => (
-            console.log('instance update'),
-            this.duplicateCourseInstances = (this.stats.courseInstancesAdded.match(/d/g) || []).length, 
-            this.newCourseInstances = (this.stats.courseInstancesAdded.match(/n/g) || []).length,
-            this.newCourses = (this.stats.coursesAdded.match(/n/g) || []).length))
-          .then(() => this.message = `Er zijn ${ this.newCourses } nieuwe cursussen en ${ this.newCourseInstances } nieuwe cursus instanties toegevoegd!`)
-          .then(() => { 
-            if (this.duplicateCourseInstances > 0) 
-            {
-              this.duplicateMessage = `Er zijn ${this.duplicateCourseInstances} duplicaten tegengekomen`
-            }
-        })
-        }} 
-      ) 
+  async getFile(event: any) : Promise<void> {
+    this.showMessage = this.showDuplicateMessage = this.showErrorMessage = false;
+    const txtData = await this.uploadFileService.readFile(event.target.files[0]);
+    let errorObject : ErrorResult = this.checkFileService.checkForErrors(txtData);
+    if (!errorObject.errorMessage) {
+      let stats : CoursesAddedStats = await this.uploadFileService.PostCourses(errorObject.courseArray);
+      this.setMessages(stats);
+      return;
     }
-    fileReader.readAsText(file);
-  }
+    this.errorMessage = errorObject.errorMessage;
+    this.showErrorMessage = true;
+  };
   
+  setMessages(stats : CoursesAddedStats ) {
+    let mutations : CourseMutations = CreateCourseMutation();
+    mutations.setValues(stats);
+    if(mutations.newCourseInstances) {
+      this.message = `Er zijn ${ mutations.newCourses } nieuwe cursussen en ${ mutations.newCourseInstances } nieuwe cursus instanties toegevoegd!`
+      this.showMessage = true;
+    }
+    if(mutations.duplicateCourseInstances) {
+      this.duplicateMessage = `Er zijn ${mutations.duplicateCourseInstances} duplicaten tegengekomen`;
+      this.showDuplicateMessage = true;
+    } 
+  }
+
   ngOnInit(): void {
   }
 

@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AddCourseComponent } from './components/add-course/add-course.component';
+import { CoursesByWeekFormComponent } from './components/courses-by-week-form/courses-by-week-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CourseOverviewComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CoursesByWeekFormComponent
   ],
   imports: [
     BrowserModule,

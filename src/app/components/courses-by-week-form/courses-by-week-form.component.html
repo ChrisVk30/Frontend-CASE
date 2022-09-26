@@ -1,0 +1,9 @@
+<form 
+id="coursesByWeekYear"
+[formGroup]="getCoursesByWeekYearForm"
+(change)="coursesWkYr()">
+  <label for="input-week">Weeknummer:</label>
+  <input id="input-week" value= {{chosenWeek}} type="number" formControlName="chosenWeek" max="53" min="1" onkeyup="if(this.value > 53 || this.value < 1) this.value = null;">
+  <label for="input-year">Jaartal:</label>
+  <input id="input-year" value= {{chosenYear}} type="number" formControlName="chosenYear" max="2024" min="2017">
+</form>

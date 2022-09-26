@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs';
-import { CourseOverview } from 'src/app/models/courseoverview';
+import { Course } from 'src/app/models/courseoverview';
+import { DateValues } from 'src/app/models/datevalues';
 import { CourseOverviewService } from 'src/app/services/course-overview/courseoverview.service';
 
 @Component({
@@ -13,83 +14,71 @@ import { CourseOverviewService } from 'src/app/services/course-overview/courseov
 export class CourseOverviewComponent implements OnInit {
 
   subscription!: Subscription;
-  allcourses: CourseOverview[] = [];
   isLoading: boolean = true;
-  currentWeek : number = moment().week();
-  currentYear : number = moment().year();
+  allCourses : Course[] = [];
+  date: moment.Moment = moment().startOf('week');
+  week: number = this.date.week();
+  year: number = this.date.year();
+  bookmarks: DateValues[] = []
   
-  constructor ( private courseOverviewService : CourseOverviewService ) { }
+  constructor ( 
+    private courseOverviewService : CourseOverviewService,
+    ) { }
   
-  getCoursesByWeekYearForm = new FormGroup({
-    chosenWeek: new FormControl(moment().week(), {
-      validators: [Validators.required, Validators.min(1), Validators.max(53)],
-      nonNullable: true
-    }),
-    chosenYear: new FormControl(moment().year(), { 
-      validators: [Validators.required, Validators.min(moment().year() - 5), Validators.max(moment().year() + 1)],
-      nonNullable: true 
-    })
-    });
-
   ngOnInit(): void {
     this.getAllCourses();
+    if (localStorage.getItem("favorites")) {
+      this.bookmarks = JSON.parse(localStorage.getItem("favorites")!);
+  } else {
+      this.bookmarks = [];
+  }
+  }
+
+  addBookmark() {
+    if(!this.bookmarks.some(x => (x.chosenWeek == this.week && x.chosenYear === this.year)) && this.bookmarks.length < 12) {
+        this.bookmarks.push({ chosenWeek: this.week, chosenYear: this.year })    
+        localStorage.setItem("favorites", JSON.stringify(this.bookmarks));
+    }
   }
 
   getAllCourses() : void {
     this.subscription = this.courseOverviewService
       .getAllCourses()
-      .subscribe((courses: CourseOverview[]) => {
-        this.allcourses = courses;
+      .subscribe((courses: Course[]) => {
+        this.allCourses = courses;
         this.isLoading = false;
       })
   }
 
-  getCoursesWkYr() : void {
-    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue();
-    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();
+  getCoursesWkYr(dateValues : DateValues) : void {
+    this.setDateValues(this.date.year(dateValues.chosenYear).week(dateValues.chosenWeek));
     this.subscription = this.courseOverviewService
-      .getCoursesByWeekYear(week, year)
-      .subscribe((courses: CourseOverview[]) => {
-        this.allcourses = courses;
+      .getCoursesByWeekYear(dateValues.chosenWeek, dateValues.chosenYear)
+      .subscribe((courses: Course[]) => {
+        this.allCourses = courses;
         this.isLoading = false;
       })
   }
 
-  getCoursesCurrWk(week : number, year : number) : void {
+  getCoursesWk(addition?: number) : void {
+    if (addition) {
+      this.setDateValues(this.date.add(addition, "week"));
+    }
+    else {
+      this.setDateValues(moment());
+    }
     this.subscription = this.courseOverviewService
-      .getCoursesByWeekYear(week, year)
-      .subscribe((courses: CourseOverview[]) => {
-        this.allcourses = courses;
+      .getCoursesByWeekYear(this.date.week(), this.date.year())
+      .subscribe((courses: Course[]) => {
+        this.allCourses = courses;
         this.isLoading = false;
       })
-    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);
-    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);
   }
 
-  getCoursesNextWk() {
-    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() + 1;
-    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();
-    this.subscription = this.courseOverviewService
-      .getCoursesByWeekYear(week, year)
-      .subscribe((courses: CourseOverview[]) => {
-        this.allcourses = courses;
-        this.isLoading = false;
-      })
-    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);
-    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);
-  }
-
-  getCoursesPrevWk() {
-    let week = this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue() - 1;
-    let year = this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue();
-    this.subscription = this.courseOverviewService
-      .getCoursesByWeekYear(week, year)
-      .subscribe((courses: CourseOverview[]) => {
-        this.allcourses = courses;
-        this.isLoading = false;
-      })
-    this.getCoursesByWeekYearForm.controls.chosenYear.setValue(year);
-    this.getCoursesByWeekYearForm.controls.chosenWeek.setValue(week);
+  setDateValues(date : moment.Moment) {
+    this.date = date;
+    this.week = date.week();
+    this.year = date.year();
   }
 
   ngOnDestroy(): void {
