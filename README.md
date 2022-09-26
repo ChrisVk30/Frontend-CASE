@@ -1,4 +1,13 @@
-# CourseApp
+## Frontend site
+Website draait op localhost:4200;
+
+## Status project en opgeleverde onderdelen
+Het totale project is gerealiseerd tot aan het stukje van slice 4 van de opdracht 
+waar logica toegevoegd moest worden voor het uploaden van een file met specifieke start en eind data# CourseApp
+
+
+
+------------------------------------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
