@@ -5,14 +5,17 @@ id="coursesForm"
 >
   <div id="coursesCurrentWeek">
   <button
-  (click)="getCoursesWk()"
+  [ngClass]="{'active': activeBtn === 1}"
+  (click)="getCoursesWk(); toggle(1)"
   >
   Toon huidige week
   </button>
+
   </div>
   <div id="coursesPrevWeek">
   <button
-  (click)="getCoursesWk(-1)">
+  [ngClass]="{'active': activeBtn === 2}"
+  (click)="getCoursesWk(-1); toggle(2)">
     << Vorige week
   </button>
 </div>
@@ -25,18 +28,24 @@ id="coursesForm"
 </isk-courses-by-week-form>
 
   <div id="coursesNextWeek">
-    <button id="save" (click)="addBookmark()">
+    <button id="save" 
+    [ngClass]="{'active': activeBtn === 3}"
+    (click)="addBookmark(); toggle(3)">
       ❤
     </button>
 
     <button
-    (click)="getCoursesWk(1)"
-    >Volgende week >></button>  
+    [ngClass]="{'active': activeBtn === 4}"
+    (click)="getCoursesWk(1); toggle(4)"
+    >
+    Volgende week >>
+  </button>  
   </div>
   
   <div id="coursesAllTime">
     <button
-    (click)="getAllCourses()"
+    [ngClass]="{'active': activeBtn === 5}"
+    (click)="getAllCourses(); toggle(5)"
     >
     Toon alle cursussen
     </button>
@@ -48,7 +57,7 @@ id="bookmarks"
 *ngIf="bookmarks.length" >
   <p>Favorieten:</p>  
   <button
-  *ngFor="let bookmark of bookmarks"
+  *ngFor="let bookmark of bookmarks; let i = index" [ngClass]="{'active': bookmark.isClicked}" (click)="getCoursesWkYr(bookmark); setActive(bookmark)"
   (click)= "getCoursesWkYr(bookmark)"
   >{{bookmark.chosenWeek}} {{bookmark.chosenYear}}
   </button>

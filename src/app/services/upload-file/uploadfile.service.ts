@@ -30,7 +30,7 @@ export class UploadFileService {
     });
   }
 
-  async PostCourses(courseArray : Course[]) : Promise<CoursesAddedStats> {
+  async postCourses(courseArray : Course[]) : Promise<CoursesAddedStats> {
     return await firstValueFrom(this.http.post<CoursesAddedStats>('https://localhost:7125/api/courses', courseArray, this.httpOptions))
   }
 }

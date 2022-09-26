@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { CoursesAddedStats } from 'src/app/models/courseaddedstats';
 import { CourseMutations, CreateCourseMutation } from 'src/app/models/coursemutations';
 import { ErrorResult } from 'src/app/models/errorresult';
@@ -24,12 +25,21 @@ export class AddCourseComponent implements OnInit {
   showDuplicateMessage = false;
   showErrorMessage = false;
 
+  addByStartEndDateForm = new FormGroup({
+    chosenWeek: new FormControl('', {
+      validators: [],
+    }),
+    chosenYear: new FormControl('', { 
+      validators: [],
+    })
+    });
+
   async getFile(event: any) : Promise<void> {
     this.showMessage = this.showDuplicateMessage = this.showErrorMessage = false;
     const txtData = await this.uploadFileService.readFile(event.target.files[0]);
     let errorObject : ErrorResult = this.checkFileService.checkForErrors(txtData);
     if (!errorObject.errorMessage) {
-      let stats : CoursesAddedStats = await this.uploadFileService.PostCourses(errorObject.courseArray);
+      let stats : CoursesAddedStats = await this.uploadFileService.postCourses(errorObject.courseArray);
       this.setMessages(stats);
       return;
     }

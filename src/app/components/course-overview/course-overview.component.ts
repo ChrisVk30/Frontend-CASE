@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs';
 import { Course } from 'src/app/models/courseoverview';
-import { DateValues } from 'src/app/models/datevalues';
+import { createDateValues, DateValues } from 'src/app/models/datevalues';
 import { CourseOverviewService } from 'src/app/services/course-overview/courseoverview.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class CourseOverviewComponent implements OnInit {
 
   subscription!: Subscription;
   isLoading: boolean = true;
+  activeBtn: number = 0;
   allCourses : Course[] = [];
   date: moment.Moment = moment().startOf('week');
   week: number = this.date.week();
@@ -34,9 +35,21 @@ export class CourseOverviewComponent implements OnInit {
   }
   }
 
+  toggle(num : number) {
+    this.activeBtn = num;
+  }
+
+  setActive(button: any): void {
+    for(let bookmark of this.bookmarks) {
+      bookmark.isClicked = false;
+    }
+    button.isClicked = true;
+  }
+
   addBookmark() {
     if(!this.bookmarks.some(x => (x.chosenWeek == this.week && x.chosenYear === this.year)) && this.bookmarks.length < 12) {
-        this.bookmarks.push({ chosenWeek: this.week, chosenYear: this.year })    
+        let dateValue : DateValues = createDateValues({ chosenWeek: this.week, chosenYear: this.year });
+        this.bookmarks.push(dateValue)    
         localStorage.setItem("favorites", JSON.stringify(this.bookmarks));
     }
   }

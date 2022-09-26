@@ -18,3 +18,13 @@
 {{ errorMessage }}
 </p>
 </div>
+
+<form 
+id="coursesByWeekYear"
+[formGroup]="addByStartEndDateForm"
+>
+  <label for="input-week">Startdatum:</label>
+  <input id="input-week" type="date" formControlName="startdate" #startdate><br>
+  <label for="input-year">Einddatum:</label>
+  <input id="input-year" type="date" formControlName="enddate" >
+</form>

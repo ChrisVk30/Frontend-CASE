@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
-import { DateValues } from 'src/app/models/datevalues';
+import { createDateValues, DateValues } from 'src/app/models/datevalues';
 
 @Component({
   selector: 'isk-courses-by-week-form',
@@ -21,13 +21,12 @@ export class CoursesByWeekFormComponent implements OnInit {
 
 
   coursesWkYr() {
-    this.dateEvent.emit
-                        ({ chosenWeek : this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue(),
+    this.dateEvent.emit(
+                        createDateValues({ 
+                          chosenWeek : this.getCoursesByWeekYearForm.controls.chosenWeek.getRawValue(),
                           chosenYear : this.getCoursesByWeekYearForm.controls.chosenYear.getRawValue()
-                        });
+                        }));
   }
-
-  
 
   constructor() { }
 

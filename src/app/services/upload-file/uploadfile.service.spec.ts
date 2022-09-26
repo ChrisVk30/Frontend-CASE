@@ -1,16 +1,19 @@
-// import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
 
-// import { UploadFileService } from './uploadfile.service';
+import { UploadFileService } from './uploadfile.service';
 
-// describe('UploadServiceService', () => {
-//   let service: UploadFileService;
+describe('Service: UploadServiceService', () => {
+  let service: UploadFileService;
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(UploadFileService);
-//   });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+        imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(UploadFileService);
+  });
 
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});

@@ -40,5 +40,4 @@ export class CourseOverviewService {
       });
     return this.subject.asObservable();
   };
-
 }
